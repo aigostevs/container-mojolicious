@@ -1,0 +1,37 @@
+severity = 1
+
+[InputOutput::RequireCheckedSyscalls]
+functions = open opendir read readline readdir close closedir
+
+[NamingConventions::Capitalization]
+package_exemptions = critic|tidy
+
+[TestingAndDebugging::RequireUseStrict]
+[TestingAndDebugging::RequireUseWarnings]
+
+[ValuesAndExpressions::ProhibitMagicNumbers]
+allowed_values = all_integers
+
+[-Perl::Critic::Policy::ControlStructures::ProhibitPostfixControls]
+[-Perl::Critic::Policy::ControlStructures::ProhibitUnlessBlocks]
+
+[-Perl::Critic::Policy::Documentation::RequirePackageMatchesPodName]
+[-Perl::Critic::Policy::Documentation::RequirePodAtEnd]
+[-Perl::Critic::Policy::Documentation::RequirePodSections]
+
+[-Perl::Critic::Policy::Modules::RequireExplicitPackage]
+[-Perl::Critic::Policy::Modules::RequireNoMatchVarsWithUseEnglish]
+[-Perl::Critic::Policy::Modules::RequireVersionVar]
+
+[-Perl::Critic::Policy::RegularExpressions::ProhibitEscapedMetacharacters]
+[-Perl::Critic::Policy::RegularExpressions::RequireDotMatchAnything]
+[-Perl::Critic::Policy::RegularExpressions::RequireExtendedFormatting]
+[-Perl::Critic::Policy::RegularExpressions::RequireLineBoundaryMatching]
+
+[-Perl::Critic::Policy::Subroutines::ProhibitExplicitReturnUndef]
+[-Perl::Critic::Policy::Subroutines::ProhibitSubroutinePrototypes]
+[-Perl::Critic::Policy::Subroutines::RequireArgUnpacking]
+[-Perl::Critic::Policy::Subroutines::RequireFinalReturn]
+
+[-Perl::Critic::Policy::ValuesAndExpressions::ProhibitEmptyQuotes]
+[-Perl::Critic::Policy::ValuesAndExpressions::ProhibitNoisyQuotes]

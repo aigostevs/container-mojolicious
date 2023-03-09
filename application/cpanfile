@@ -2,6 +2,7 @@ requires 'Mojolicious',                  '>= 9.31';
 requires 'Mojolicious::Plugin::OpenAPI', '>= 5.09';
 
 on 'test' => sub {
-    requires 'Perl::Tidy', '>= 20221112';
-    requires 'Path::Tiny', '>= 0.144';
+    requires 'Perl::Critic', '>= 1.150';
+    requires 'Perl::Tidy',   '>= 20221112';
+    requires 'Path::Tiny',   '>= 0.144';
 };

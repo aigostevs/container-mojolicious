@@ -94,7 +94,7 @@ sub _tidy_file {
 
         my $fh = path($file)->filehandle('>');
         print {$fh} $tidy;
-        close($fh);
+        close $fh;
 
         say "File $file was tidied";
     }

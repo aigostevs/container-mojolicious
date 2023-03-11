@@ -55,9 +55,9 @@ sub tidy {
 
     $self->files(\@files) if @files;
 
-    my $success;
+    my $success = 1;
     foreach my $file (@{$self->files}) {
-        $success = $self->_tidy_file($file);
+        $success = 0 unless $self->_tidy_file($file);
     }
 
     # In case we are running with --check-only

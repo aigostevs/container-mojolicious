@@ -26,16 +26,16 @@ RUN true \
     && groupadd -g 1000 mojolicious \
     && useradd -u 1000 -g mojolicious mojolicious
 
-# Import application
-RUN chown mojolicious:mojolicious ${APP_ROOT}
-COPY --chown=mojolicious:mojolicious application/ .
-
 # Cleanup
 RUN true \
     && apt-mark auto ${TEMPORARY_PACKAGES} > /dev/null \
     && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
     && rm -rf /var/cache/apt/* /var/lib/apt/lists/* \
     && rm -rf /root/.cpanm /tmp/*
+
+# Import application
+RUN chown mojolicious:mojolicious ${APP_ROOT}
+COPY --chown=mojolicious:mojolicious application/ .
 
 USER mojolicious
 ENV MOJO_LISTEN="http://*:${APP_PORT}"

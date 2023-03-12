@@ -40,9 +40,9 @@ sub criticize {
 
     $self->files(\@files) if @files;
 
-    my $success;
+    my $success = 1;
     foreach my $file (@{$self->files}) {
-        $success = $self->_criticize_file($file);
+        $success = 0 unless $self->_criticize_file($file);
     }
 
     exit 1 unless $success;

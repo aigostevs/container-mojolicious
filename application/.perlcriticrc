@@ -12,6 +12,8 @@ package_exemptions = critic|tidy
 [ValuesAndExpressions::ProhibitMagicNumbers]
 allowed_values = all_integers
 
+[-Perl::Critic::Policy::CodeLayout::RequireTidyCode]
+
 [-Perl::Critic::Policy::ControlStructures::ProhibitPostfixControls]
 [-Perl::Critic::Policy::ControlStructures::ProhibitUnlessBlocks]
 

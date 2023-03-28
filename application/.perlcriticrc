@@ -4,7 +4,7 @@ severity = 1
 functions = open opendir read readline readdir close closedir
 
 [NamingConventions::Capitalization]
-package_exemptions = critic|tidy
+package_exemptions = critic|tidy|test
 
 [TestingAndDebugging::RequireUseStrict]
 [TestingAndDebugging::RequireUseWarnings]
